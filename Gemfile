@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'majic'
+gem 'multi_json', '~> 1.10'
 
-group :development do
+group :test do
   gem 'rspec'
   gem 'guard'
   gem 'guard-rspec'

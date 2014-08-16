@@ -29,8 +29,9 @@ Gem::Specification.new do |spec|
   spec.require_path = 'library'
 
   # The dependencies.
-  spec.add_runtime_dependency 'majic', '~> 0.4.3'
-  spec.add_development_dependency 'rspec', '> 2.0'
+  spec.add_development_dependency 'guard', '~> 2.6'
+  spec.add_development_dependency 'guard-rspec', '~> 4.3'
+  spec.add_development_dependency 'rspec', '~> 3.0'
 end
 
 # vim: set syntax=ruby
