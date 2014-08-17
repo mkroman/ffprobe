@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'multi_json'
+require 'shellwords'
 
 require 'ffprobe/version'
 require 'ffprobe/container'
@@ -37,8 +38,11 @@ module FFProbe
       raise "The file `#{file}' could not be read."
     end
 
+    output = %x{#{path} -print_format json -show_format -show_streams -v quiet}
+    json = MultiJson.load output
+
     Container.new(file).tap do |container|
-      container.parse!
+      container.parse! json
     end
   end
 end

@@ -16,7 +16,8 @@ module FFProbe
       @path = path
     end
 
-    def parse!
+    def parse! json
+      pp json
     end
   end
 end
